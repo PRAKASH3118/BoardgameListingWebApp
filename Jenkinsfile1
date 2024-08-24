@@ -24,15 +24,14 @@ pipeline {
             steps {
                 sh "mvn package"
             }
-        }
-
+        }        
         
-        }
         
-        stage('Build') {
+        stage(Install') {
             steps {
-                sh "mvn package"
+                sh "mvn install"
             }
         }
+
     }
 }
